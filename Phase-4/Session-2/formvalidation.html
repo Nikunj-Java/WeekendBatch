@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+</head>
+<body>
+
+    <div class="container">
+
+        <form class="needs-validation"  novalidate>
+            <!--First Row-->
+            <div class="form-row">
+                <div class="col-md-4 mb-3">
+                    <label for="valid01">First Name</label>
+                    <input type="text" class="form-control" id="valid01" placeholder="First Name" required>
+                    
+                    <!--Custom Validations-->
+                    <div class="invalid-feedback">
+                            First Name Can't be Empty
+                    </div>
+                
+                </div>
+    
+                <div class="col-md-4 mb-3">
+                    <label for="valid02">Last Name</label>
+                    <input type="text" class="form-control" id="valid02" placeholder="Last Name" required>
+                
+                   <!--Custom Validations-->
+                    <div class="invalid-feedback">
+                        Last Name Can't be Empty
+                    </div>
+                
+                </div>
+    
+                <div class="col-md-4 mb-3">
+                    <label for="valid03">User Name</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="inputGroupPrepend">@</span>
+                        </div>
+                        <input type="text" class="form-control" id="valid03" placeholder="User Name" required>
+                         <!--Custom Validations-->
+                        <div class="invalid-feedback">
+                        User Name Can't be Empty
+                        </div>
+                    </div>
+                    
+                </div>
+    
+    
+            </div>
+    
+            <div class="form-row">
+                <div class="col-md-4 mb-3">
+                    <label for="valid04">City</label>
+                    <input type="text" class="form-control" id="valid04" placeholder="Enter City Name" required>
+                    
+                     <!--Custom Validations-->
+                     <div class="invalid-feedback">
+                        City Can't be Empty
+                    </div>
+
+                </div>
+    
+                <div class="col-md-4 mb-3">
+                    <label for="valid05">State</label>
+                    <input type="text" class="form-control" id="valid05" placeholder="Enter State Name" required>
+                
+                     <!--Custom Validations-->
+                     <div class="invalid-feedback">
+                        State Can't be Empty
+                    </div>
+
+                
+                </div>
+    
+                <div class="col-md-4 mb-3">
+                    <label for="valid06">Pincode</label>
+                    <input type="text" class="form-control" id="valid06" placeholder="Enter Pincode" required>
+                
+                
+                     <!--Custom Validations-->
+                     <div class="invalid-feedback">
+                     Pincode Can't be Empty
+                     </div>
+                
+                </div>
+    
+                 
+            </div>
+    
+            <div class="col-md-3 mb-3">
+                <label for="disabledinput">I Like to read Some topics About</label>
+                <fieldset disabled>
+                    <input type="text" class="form-control" id="disabledinput" placeholder="WebDevelopement" required>
+    
+                </fieldset>
+            </div>
+    
+            <p>Where did you find us?</p>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" value="l1" id="ch1" name="location">
+                <label class="form-check-label" for="ch1">Facebbok</label>
+            </div>
+    
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" value="l2" id="ch2" name="location">
+                <label class="form-check-label" for="ch2">Linked In</label>
+            </div>
+    
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" value="l3" id="ch3" name="location">
+                <label class="form-check-label" for="ch3">Instagram</label>
+            </div>
+    
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" value="l4" id="ch4" name="location">
+                <label class="form-check-label" for="ch4">Twitter</label>
+            </div>
+    
+            <div class="form-group">
+                <div class="form-check">
+                    <input type="checkbox"  class="form-check-input" value="" id="check" required>
+                    <label class="form-check-label" for="check">Agree Terms and Conditions</label>
+                
+                
+                    <!--Custom Validations-->
+                 <div class="invalid-feedback">
+                    You Must Agree Before Submit
+                </div>
+                </div>
+                 
+            </div>
+    
+            <button class="btn btn-primary">Register</button>
+    
+        </div>
+
+    </div>
+    
+
+    <script>
+         //(function)(); such functions are called as IIFE functions
+          (function()
+          {
+            'use strict';
+            window.addEventListener('load',function(){
+                //cath the form by class name
+
+                var form= document.getElementsByClassName("needs-validation");
+                //iterate with all form
+
+                var validation= Array.prototype.filter.call(form,function(form){
+                    form.addEventListener('submit',function()
+                    {
+
+                        if(form.checkValidity()==false){
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+
+                    },false)
+                })
+
+            },false)
+
+          })();
+    </script>
+
+
+    
+    
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+</body>
+</html>
