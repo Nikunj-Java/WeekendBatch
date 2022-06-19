@@ -16,17 +16,16 @@
         }
 
         //function is called as callback
-        function fullname (fname,lanme,callback){
-            fullname=fname+ " "+lanme;
+        function fullname (fname,callback){
+            fullname=fname;
             console.log("Fullname: "+fullname);
-            document.write("<br>Fullname: "+fullname);
             callback(fullname);// callback function
         }
 
         //passing greeting function to callback variable
         //this is known as function as an argument
 
-        fullname("Nikunj","Soni",greeting)
+        fullname("Nikunj",greeting)
     </script>
     
 </body>
