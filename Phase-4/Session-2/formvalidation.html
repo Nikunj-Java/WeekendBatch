@@ -149,15 +149,12 @@
           {
             'use strict';
             window.addEventListener('load',function(){
-                //cath the form by class name
-
+                //catch the form by class name
                 var form= document.getElementsByClassName("needs-validation");
                 //iterate with all form
-
                 var validation= Array.prototype.filter.call(form,function(form){
                     form.addEventListener('submit',function()
                     {
-
                         if(form.checkValidity()==false){
                             event.preventDefault();
                             event.stopPropagation();
