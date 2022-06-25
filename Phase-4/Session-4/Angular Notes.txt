@@ -49,7 +49,8 @@ function test(num1:number,num2:number):number{
 
 ---------------------------------------------------------------------
 
-goto to terminal in visual studio code and choose cmd from dropdown
+goto to terminal in visual studio code and click on new terminal and choose cmd from dropdown
+
 >tsc first.ts
 
 you will see that a new file named 'first.js' is automatically prepared in the folder
@@ -58,13 +59,17 @@ you will see that a new file named 'first.js' is automatically prepared in the f
 
 you will see the output in console(terminal cmd)
 
-
 prepare 'tsconfig.json' file: it is  a file to configure JSON file
 
 how .ts CONVERTS .js we can configure in this file
 
 
 >tsc --init (will create tsconfig.json file and we can check the same)
+
+-----------------------------------------------------------------------------
+
+
+
 
 
 
