@@ -67,7 +67,17 @@ how .ts CONVERTS .js we can configure in this file
 >tsc --init (will create tsconfig.json file and we can check the same)
 
 -----------------------------------------------------------------------------
+STEP: 3 INSTALLING ANGULAR ON YOUR MACHINE
+-----------------------------------------------------------------------------
 
+let's install angular
+> npm install -g @angular/cli   
+		OR
+> npm i -g @angular/cli
+
+to check the version
+> ng --version
+	output: Angular CLI: 13.3.5
 
 
 
