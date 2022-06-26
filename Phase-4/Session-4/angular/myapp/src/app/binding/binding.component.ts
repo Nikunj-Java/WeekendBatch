@@ -11,8 +11,16 @@ export class BindingComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  we:number=700;
   name:string="Nikunj Soni";
   url:string="https://www.google.com";
+
+  flag:boolean=false;
+
+  show(){
+    this.flag=!this.flag;
+  }
+
   products=[{name:"pencile",price:"8.3",available:"26-06-2022",rating:4.8},
             {name:"pen",price:"9.0",available:"30-06-2022",rating:5.0},
             {name:"Eraser",price:"5.5",available:"01-07-2022",rating:4.5},

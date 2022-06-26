@@ -27,10 +27,21 @@
         <!--NgDirectives  Eg:*ngFor,*ngIf,*ngSwitch-->
         <tr *ngFor="let p of products">
             <td>{{p.name}}</td>
-            <td>{{p.price}}</td>
+
+            <!--Style Binding Example-->
+            <td [style.font-weight]="we">{{p.price}}</td>
+            <!--Style Bindings Ends here-->
+
             <td>{{p.available}}</td>
             <td>{{p.rating}}</td>
         </tr>
 
     </tbody>
 </table>
+
+<div class="container">
+    <button class="btn btn-primary" (click)="show()" >Show Div</button>
+    <div *ngIf="flag" style="background-color: yellowgreen">
+        This is My Div and You Have Implemented Event Binding
+    </div>
+</div>
