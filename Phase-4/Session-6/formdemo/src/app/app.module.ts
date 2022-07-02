@@ -9,6 +9,7 @@ import { UserService } from './user.service';
 import { DirectivesComponent } from './directives/directives.component';
 import { ChangeColorDirective } from './ChangeColorDirective';
 import { HighlightDirective } from './HighlightDirective';
+import { SwichcaseComponent } from './swichcase/swichcase.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { HighlightDirective } from './HighlightDirective';
     RegisterComponent,
     DirectivesComponent,
     ChangeColorDirective,
-    HighlightDirective
+    HighlightDirective,
+    SwichcaseComponent
   ],
   imports: [
     BrowserModule,
