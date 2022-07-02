@@ -5,13 +5,18 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RegisterComponent } from './register/register.component';
-import { ServicedemoComponent } from './servicedemo/servicedemo.component';
+import { UserService } from './user.service';
+import { DirectivesComponent } from './directives/directives.component';
+import { ChangeColorDirective } from './ChangeColorDirective';
+import { HighlightDirective } from './HighlightDirective';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegisterComponent,
-    ServicedemoComponent
+    DirectivesComponent,
+    ChangeColorDirective,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
@@ -19,7 +24,7 @@ import { ServicedemoComponent } from './servicedemo/servicedemo.component';
     ReactiveFormsModule,
     FormsModule
   ],
-  providers: [],
+  providers: [UserService],//registering service
   bootstrap: [AppComponent]
 })
 export class AppModule { }
