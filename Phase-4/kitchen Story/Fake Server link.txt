@@ -1,0 +1,6 @@
+https://www.freakyjolly.com/angular-service-example-crud-operations/
+
+
+generate Crud HTTP Service:
+
+>ng generate service crud-http
